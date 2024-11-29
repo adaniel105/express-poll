@@ -15,7 +15,7 @@ const App = () => {
     return `User-${randomName}`;
   }, []);
     
-    // 🔌⚡️ get the connected socket client from our useSocket hook! 
+    // get the connected socket client from our useSocket hook! 
   const { socket, isConnected } = useSocket({ endpoint: `http://localhost:8000`, token: randomUser });
 
   const totalVotes = useMemo(() => {
