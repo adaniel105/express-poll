@@ -1,0 +1,12 @@
+{
+  "dependencies": {
+    "concurrently": "^9.1.1"
+  },
+  "scripts": {
+    "server": "npm start --prefix ws-server",
+    "client": "npm run build --prefix ws-client",
+    "build" : "concurrently \"npm run server\" \"npm run client\"",
+    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0"
+    
+  }
+}
