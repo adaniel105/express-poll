@@ -1,12 +1,14 @@
 {
   "dependencies": {
-    "concurrently": "^9.1.1"
+    "concurrently": "^9.1.1",
+    "ts-node": "^10.9.2",
+    "tsc": "^2.0.4",
+    "typescript": "^5.7.2"
   },
   "scripts": {
     "server": "npm start --prefix ws-server",
-    "client": "npm run build --prefix ws-client",
-    "build" : "concurrently \"npm run server\" \"npm run client\"",
+    "client": "npm run dev --prefix ws-client",
+    "build": "concurrently \"npm run server\" \"npm run client\"",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0"
-    
   }
 }
